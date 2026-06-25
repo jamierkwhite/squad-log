@@ -17,6 +17,7 @@ out/
 
 # Expo / React Native
 .expo/
+expo-env.d.ts
 *.jks
 *.p8
 *.p12
@@ -26,6 +27,9 @@ out/
 web-build/
 android/
 ios/
+.kotlin/
+.metro-health-check*
+*.pem
 
 # TypeScript
 *.tsbuildinfo

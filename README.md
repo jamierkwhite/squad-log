@@ -40,13 +40,71 @@ A dedicated space where the only content is training logs. Open the app → see 
 
 ## Project Status
 
-🚧 **Pre-development** — Architecture and roadmap defined, implementation starting soon.
-
-See [`project-items/roadmap.md`](project-items/roadmap.md) for the full product roadmap.
+🚧 **Early development** — Monorepo scaffolded, implementation in progress.
 
 ## Development
 
-Setup instructions will be added once the monorepo is scaffolded (Story 001).
+### Prerequisites
+
+- Node.js >= 20
+- npm >= 10
+- For iOS: Xcode + CocoaPods
+- For Android: Android Studio + Android SDK
+
+### Setup
+
+```sh
+# Clone the repo
+git clone <repo-url>
+cd squad-log
+
+# Install all workspace dependencies
+npm install
+```
+
+### Running the app
+
+```sh
+# Start the Expo dev server (all platforms)
+npm run dev
+
+# Or target a specific platform
+npm run -w @squad-log/mobile ios
+npm run -w @squad-log/mobile android
+npm run -w @squad-log/mobile web
+```
+
+### Workspace commands
+
+```sh
+# Typecheck all packages
+npm run typecheck
+
+# Lint all packages
+npm run lint
+
+# Run all tests
+npm run test
+
+# Build all packages
+npm run build
+```
+
+### Project structure
+
+```
+squad-log/
+├── apps/
+│   └── mobile/           # @squad-log/mobile — Expo app (iOS, Android, Web)
+├── packages/
+│   ├── core/             # @squad-log/core — shared data model, constants, business logic
+│   └── ui/               # @squad-log/ui — shared React Native components
+├── docs/
+│   └── adrs/             # Architecture Decision Records
+├── turbo.json            # Turborepo pipeline config
+├── package.json          # Workspace root
+└── tsconfig.base.json    # Shared TypeScript config (strict mode)
+```
 
 ## License
 

@@ -12,6 +12,9 @@
     "lint": "echo \"No linter configured yet\"",
     "clean": "rm -rf dist *.tsbuildinfo"
   },
+  "dependencies": {
+    "jazz-tools": "^0.14.28"
+  },
   "devDependencies": {
     "typescript": "^5.8.3"
   }
